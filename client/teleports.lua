@@ -9,7 +9,7 @@ CreateThread(function()
         for loc,_ in pairs(Config.Teleports) do
             for k, v in pairs(Config.Teleports[loc]) do
                 local dist = #(pos - vector3(v.coords.x, v.coords.y, v.coords.z))
-                if dist < 2 then
+                if dist < 20 then
                     inRange = true
                     DrawMarker(2, v.coords.x, v.coords.y, v.coords.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.3, 0.15, 255, 255, 255, 255, 0, 0, 0, 1, 0, 0, 0)
 

@@ -207,7 +207,7 @@ RegisterNetEvent('consumables:client:Eat', function(itemName)
         TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items[itemName], "remove")
         TriggerEvent('animations:client:EmoteCommandStart', {"c"})
         TriggerServerEvent("QBCore:Server:SetMetaData", "hunger", QBCore.Functions.GetPlayerData().metadata["hunger"] + ConsumeablesEat[itemName])
-        TriggerServerEvent('hud:server:RelieveStress', math.random(2, 4))
+        TriggerServerEvent('hud:server:RelieveStress', math.random(8, 15))
     end)
 end)
 
@@ -222,6 +222,7 @@ RegisterNetEvent('consumables:client:Drink', function(itemName)
         TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items[itemName], "remove")
         TriggerEvent('animations:client:EmoteCommandStart', {"c"})
         TriggerServerEvent("QBCore:Server:SetMetaData", "thirst", QBCore.Functions.GetPlayerData().metadata["thirst"] + ConsumeablesDrink[itemName])
+        TriggerServerEvent('hud:server:RelieveStress', math.random(20, 25))
     end)
 end)
 
@@ -237,6 +238,7 @@ RegisterNetEvent('consumables:client:DrinkAlcohol', function(itemName)
         TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items[itemName], "remove")
         TriggerServerEvent("QBCore:Server:RemoveItem", itemName, 1)
         TriggerServerEvent("QBCore:Server:SetMetaData", "thirst", QBCore.Functions.GetPlayerData().metadata["thirst"] + ConsumeablesAlcohol[itemName])
+        TriggerServerEvent('hud:server:RelieveStress', math.random(5, 8))
         alcoholCount = alcoholCount + 1
         if alcoholCount > 1 and alcoholCount < 4 then
             TriggerEvent("evidence:client:SetStatus", "alcohol", 200)
@@ -453,7 +455,7 @@ RegisterNetEvent('consumables:client:UseHeavyArmor', function()
 		disableMouse = false,
 		disableCombat = true,
     }, {}, {}, {}, function() -- Done
-        if PlayerData.charinfo.gender == 0 then
+        --[[if PlayerData.charinfo.gender == 0 then
             currentVest = GetPedDrawableVariation(ped, 9)
             currentVestTexture = GetPedTextureVariation(ped, 9)
             if GetPedDrawableVariation(ped, 9) == 7 then
@@ -465,7 +467,7 @@ RegisterNetEvent('consumables:client:UseHeavyArmor', function()
             currentVest = GetPedDrawableVariation(ped, 30)
             currentVestTexture = GetPedTextureVariation(ped, 30)
             SetPedComponentVariation(ped, 9, 30, 0, 2)
-        end
+        end]]--
         TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["heavyarmor"], "remove")
         TriggerServerEvent("QBCore:Server:RemoveItem", "heavyarmor", 1)
         SetPedArmour(ped, 100)
