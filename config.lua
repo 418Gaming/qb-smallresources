@@ -3,7 +3,7 @@ Config.MaxWidth = 5.0
 Config.MaxHeight = 5.0
 Config.MaxLength = 5.0
 Config.DamageNeeded = 100.0
-Config.EnableProne = true
+Config.EnableProne = false
 Config.JointEffectTime = 60
 Config.RemoveWeaponDrops = true
 Config.RemoveWeaponDropsTimer = 25
@@ -44,8 +44,8 @@ Config.BlacklistedScenarios = {
 
 Config.BlacklistedVehs = {
     [`SHAMAL`] = true,
-    [`LUXOR`] = true,
-    [`LUXOR2`] = true,
+    [`LUXOR`] = false,
+    [`LUXOR2`] = false,
     [`JET`] = true,
     [`LAZER`] = true,
     [`BUZZARD`] = true,
@@ -54,11 +54,11 @@ Config.BlacklistedVehs = {
     [`TITAN`] = true,
     [`RHINO`] = true,
     [`FIRETRUK`] = true,
-    [`MULE`] = true,
-    [`MAVERICK`] = true,
+    [`MULE`] = false,
+    [`MAVERICK`] = false,
     [`BLIMP`] = true,
     [`AIRTUG`] = true,
-    [`CAMPER`] = true,
+    [`CAMPER`] = false,
 }
 
 Config.BlacklistedPeds = {
@@ -98,6 +98,107 @@ Config.Teleports = {
             drawText = '[E] Leave'
         },
     },
+    --Train Stations
+    [3] ={
+        [1] = {
+            coords = vector4(-214.28, -1031.92, 29.96, 254.64),
+            ["AllowVehicle"] = false,
+            drawText = 'Press ~g~[E] ~w~to take the train to Rockford Hills'
+        },
+        [2] = {
+            coords = vector4(-831.96, -122.82, 28.18, 27.9),
+            ["AllowVehicle"] = false,
+            drawText = 'Press ~g~[E] ~w~to take the train Downtown'
+        },
+    },
+    --Bus Stations
+    [4] ={
+        [1] = {
+            coords = vector4(-250.02, -886.91, 30.62, 160.84),
+            ["AllowVehicle"] = false,
+            drawText = 'Press ~g~[E] ~w~to take the bus to the Bus Station'
+        },
+        [2] = {
+            coords = vector4(450.09, -650.93, 28.47, 76.31),
+            ["AllowVehicle"] = false,
+            drawText = 'Press ~g~[E] ~w~to take bus Downtown'
+        },
+    },
+    [5] ={
+        [1] = {
+            coords = vector4(450.57, -643.63, 28.49, 85.01),
+            ["AllowVehicle"] = false,
+            drawText = 'Press ~g~[E] ~w~to take the bus to Sandy Shores'
+        },
+        [2] = {
+            coords = vector4(1819.44, 3664.28, 34.28, 287.78),
+            ["AllowVehicle"] = false,
+            drawText = 'Press ~g~[E] ~w~to take the Bus Station'
+        },
+    },
+    [6] ={
+        [1] = {
+            coords = vector4(451.49, -636.51, 28.52, 83.05),
+            ["AllowVehicle"] = false,
+            drawText = 'Press ~g~[E] ~w~to take the bus to Paleto Bay'
+        },
+        [2] = {
+            coords = vector4(-219.32, 6174.93, 31.3, 249.42),
+            ["AllowVehicle"] = false,
+            drawText = 'Press ~g~[E] ~w~to take the Bus Station'
+        },
+    },
+    --Train Station
+    [7] ={
+        [1] = {
+            coords = vector4(113.17, -1725.95, 30.11, 318.81),
+            ["AllowVehicle"] = false,
+            drawText = 'Press ~g~[E] ~w~to take the trian downtown'
+        },
+        [2] = {
+            coords = vector4(-215.37, -1035.27, 30.14, 239.14),
+            ["AllowVehicle"] = false,
+            drawText = 'Press ~g~[E] ~w~to take the train to Davis'
+        },
+    },
+    --Airport Shuttle
+    [8] ={
+        [1] = {
+            coords = vector4(-1058.81, -2719.16, 13.76, 140.14),
+            ["AllowVehicle"] = false,
+            drawText = 'Press ~g~[E] ~w~to take shuttle to the Car Rental'
+        },
+        [2] = {
+            coords = vector4(-950.39, -2338.3, 5.01, 301.98),
+            ["AllowVehicle"] = false,
+            drawText = 'Press ~g~[E] ~w~to take the shuttle to the Airport Entrance'
+        },
+    },
+    [9] ={
+        [1] = {
+            coords = vector4(-1010.03, -2746.26, 13.76, 143.99),
+            ["AllowVehicle"] = false,
+            drawText = 'Press ~g~[E] ~w~to take the train to Davis'
+        },
+        [2] = {
+            coords = vector4(115.11, -1723.67, 30.11, 145.14),
+            ["AllowVehicle"] = false,
+            drawText = 'Press ~g~[E] ~w~to take the train to the Airport'
+        },
+    },
+    --Casino 
+    [10] ={
+        [1] = {
+            coords = vector4(935.72, 46.93, 81.1, 326.27),
+            ["AllowVehicle"] = false,
+            drawText = 'Press ~g~[E] ~w~to enter the Casion'
+        },
+        [2] = {
+            coords = vector4(1089.65, 206.0, -49.0, 156.93),
+            ["AllowVehicle"] = false,
+            drawText = 'Press ~g~[E] ~w~to exit the Casino'
+        },
+    },
 }
 
 Config.CarWash = { -- carwash
@@ -113,12 +214,45 @@ Config.CarWash = { -- carwash
         ["label"] = "Hands Free Carwash",
         ["coords"] = vector3(-74.56, 6427.87, 31.44),
     },
-    [5] = {
+    [4] = {
         ["label"] = "Hands Free Carwash",
         ["coords"] = vector3(1363.22, 3592.7, 34.92),
     },
-    [6] = {
+    [5] = {
         ["label"] = "Hands Free Carwash",
         ["coords"] = vector3(-699.62, -932.7, 19.01),
     }
+}
+
+Config.Blips = { -- https://wiki.rage.mp/index.php?title=Blips
+    [1] = {
+        label = "LS Customs", -- Blip name
+        coords = vector3(110.29, 6626.85, 31.26), -- Blip location
+        blip = 72, -- Blip icon
+        color = 27 -- Blip color
+    },
+    [2] = {
+        label = "LS Customs", -- Blip name
+        coords = vector3(729.51, -1088.88, 22.16), -- Blip location
+        blip = 72, -- Blip icon
+        color = 27 -- Blip color
+    },
+    [3] = {
+        label = "Benny's LS Customs", -- Blip name
+        coords = vector3(-210.42, -1322.68, 30.89), -- Blip location
+        blip = 72, -- Blip icon
+        color = 27 -- Blip color
+    },
+    [4] = {
+        label = "LS Customs", -- Blip name
+        coords = vector3(-339.92, -136.68, 39.0), -- Blip location
+        blip = 72, -- Blip icon
+        color = 27 -- Blip color
+    },
+    [5] = {
+        label = "LS Customs", -- Blip name
+        coords = vector3(258.28, 2590.37, 44.43), -- Blip location
+        blip = 72, -- Blip icon
+        color = 27 -- Blip color
+    },
 }
