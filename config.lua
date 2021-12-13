@@ -9,6 +9,8 @@ Config.RemoveWeaponDrops = true
 Config.RemoveWeaponDropsTimer = 25
 Config.DefaultPrice = 20 -- carwash
 Config.DirtLevel = 0.1 --carwash dirt level
+Config.RadioKey = 81  --- Default setting is .
+Config.HoverHolsterKey = 116  --- Default setting is [
 
 ConsumeablesEat = {
     ["sandwich"] = math.random(35, 54),
@@ -38,36 +40,36 @@ Config.BlacklistedScenarios = {
         2017590552,
         2141866469,
         1409640232,
-        `ng_planes`,
+        'ng_planes',
     }
 }
 
 Config.BlacklistedVehs = {
-    [`SHAMAL`] = true,
-    [`LUXOR`] = false,
-    [`LUXOR2`] = false,
-    [`JET`] = true,
-    [`LAZER`] = true,
-    [`BUZZARD`] = true,
-    [`ANNIHILATOR`] = true,
-    [`SAVAGE`] = true,
-    [`TITAN`] = true,
-    [`RHINO`] = true,
-    [`FIRETRUK`] = true,
-    [`MULE`] = false,
-    [`MAVERICK`] = false,
-    [`BLIMP`] = true,
-    [`AIRTUG`] = true,
-    [`CAMPER`] = false,
+    ['SHAMAL'] = true,
+    ['LUXOR'] = false,
+    ['LUXOR2'] = false,
+    ['JET'] = true,
+    ['LAZER'] = true,
+    ['BUZZARD'] = true,
+    ['ANNIHILATOR'] = true,
+    ['SAVAGE'] = true,
+    ['TITAN'] = true,
+    ['RHINO'] = true,
+    ['FIRETRUK'] = true,
+    ['MULE'] = false,
+    ['MAVERICK'] = false,
+    ['BLIMP'] = true,
+    ['AIRTUG'] = true,
+    ['CAMPER'] = false,
 }
 
 Config.BlacklistedPeds = {
-    [`s_m_y_ranger_01`] = true,
-    [`s_m_y_sheriff_01`] = true,
-    [`s_m_y_cop_01`] = true,
-    [`s_f_y_sheriff_01`] = true,
-    [`s_f_y_cop_01`] = true,
-    [`s_m_y_hwaycop_01`] = true,
+    ['s_m_y_ranger_01'] = true,
+    ['s_m_y_sheriff_01'] = true,
+    ['s_m_y_cop_01'] = true,
+    ['s_f_y_sheriff_01'] = true,
+    ['s_f_y_cop_01'] = true,
+    ['s_m_y_hwaycop_01'] = true,
 }
 
 Config.Teleports = {

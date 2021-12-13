@@ -98,17 +98,17 @@ CreateThread(function()
     while true do
         local ped = PlayerPedId()
         local weapon = GetSelectedPedWeapon(ped)
-		if weapon ~= `WEAPON_UNARMED` then
+		if weapon ~= 'WEAPON_UNARMED' then
 			if IsPedArmed(ped, 6) then
 				DisableControlAction(1, 140, true)
 				DisableControlAction(1, 141, true)
 				DisableControlAction(1, 142, true)
 			end
 
-			if weapon == `WEAPON_FIREEXTINGUISHER` or  weapon == `WEAPON_PETROLCAN` then
+			if weapon == 'WEAPON_FIREEXTINGUISHER' or  weapon == 'WEAPON_PETROLCAN' then
 				if IsPedShooting(ped) then
-					SetPedInfiniteAmmo(ped, true, `WEAPON_FIREEXTINGUISHER`)
-					SetPedInfiniteAmmo(ped, true, `WEAPON_PETROLCAN`)
+					SetPedInfiniteAmmo(ped, true, 'WEAPON_FIREEXTINGUISHER')
+					SetPedInfiniteAmmo(ped, true, 'WEAPON_PETROLCAN')
 				end
 			end
 		else
