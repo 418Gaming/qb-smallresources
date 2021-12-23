@@ -52,7 +52,6 @@ Config.BlacklistedVehs = {
     [`ANNIHILATOR`] = true,
     [`SAVAGE`] = true,
     [`TITAN`] = true,
-@@ -59,6 +60,34 @@ Config.BlacklistedVehs = {
     [`BLIMP`] = true,
     [`AIRTUG`] = true,
     [`CAMPER`] = true,
