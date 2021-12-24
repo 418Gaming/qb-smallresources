@@ -224,6 +224,31 @@ Config.Teleports = {
             drawText = 'Press ~g~[E] ~w~to exit the Casino'
         },
     },
+    --Court
+    [11] ={
+        [1] = {
+            coords = vector4(338.78, -1650.21, 32.53, 38.31),
+            ["AllowVehicle"] = false,
+            drawText = 'Press ~g~[E] ~w~to take the elevator Up'
+        },
+        [2] = {
+            coords = vector4(338.98, -1650.21, 60.53, 50.96),
+            ["AllowVehicle"] = false,
+            drawText = 'Press ~g~[E] ~w~to exit the elevator down'
+        },
+    },
+    [12] ={
+        [1] = {
+            coords = vector4(338.77, -1637.28, 28.53, 127.4),
+            ["AllowVehicle"] = false,
+            drawText = 'Press ~g~[E] ~w~to take the elevator Up'
+        },
+        [2] = {
+            coords = vector4(337.67, -1619.92, 60.53, 315.85),
+            ["AllowVehicle"] = false,
+            drawText = 'Press ~g~[E] ~w~to exit the elevator down'
+        },
+    },
 }
 
 Config.CarWash = { -- carwash
